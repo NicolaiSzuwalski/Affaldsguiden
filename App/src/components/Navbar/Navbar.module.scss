@@ -1,0 +1,23 @@
+
+
+.NavMain{
+    ul{
+        display: flex;
+        justify-content: center;
+        li:first-of-type{
+            border-left: solid 1.2px #677D6A;
+        }
+        li{
+            border-right: solid 1.2px #677D6A;
+            a{
+                font-family: "Inter", sans-serif;
+                text-transform: uppercase;
+                color: #000000;
+                padding: 19px 48px 19px 48px;
+                display: block;
+            }&:hover{
+                background-color: #D6BD98;
+            }
+        }
+    }
+}

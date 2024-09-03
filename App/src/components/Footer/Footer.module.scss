@@ -1,0 +1,22 @@
+.FooterMain{
+    background-image: url('../../assets/images/FooterBg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    div{
+        padding: 100px;
+        margin-top: 7%;
+    }
+    .Address{
+        
+    }
+    .AppStores{
+    }
+    .Socials{
+    }
+}
