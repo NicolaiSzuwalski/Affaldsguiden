@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Header.module.scss'
 import HeaderLogo from '../../assets/images/Logo.png'
-import { Login } from '../Login/Login'
+import { LoginButton } from '../LoginButton/LoginButton'
 import { Navbar } from '../Navbar/Navbar'
 import { NavLink, Link } from 'react-router-dom'
 import { Footer } from '../Footer/Footer'
@@ -14,7 +14,7 @@ export const Header = () => {
             <img src={HeaderLogo} alt="Logo" />
             </Link>
             <Link to='/Login'>
-            <Login/>
+            <LoginButton/>
             </Link>
         </header>
   )

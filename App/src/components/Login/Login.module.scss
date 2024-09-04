@@ -1,3 +1,41 @@
-.LoginLogo{
-    
+.loginContainer{
+    background: linear-gradient(to bottom, #D8EADB, #ffffff);
+    z-index: 1;
+    margin: 0 10vw 0 10vw;
+    height: 500px;
+    font-family: "Open Sans", sans-serif;
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 4em;
+        gap: 1em;
+        align-items: left;
+        h1{
+            font-size: 36px;
+            font-weight: 500;
+        }
+        input{
+            padding: 15px;
+            width: 40%;
+            background-color: #ffffff;
+            border: solid 0.5px grey;
+            font-size: 16px;
+        }
+        button{
+            width: 12%;
+            padding: 10px;
+            border-radius: 2px;
+            background-color: #119B1E;
+            color: #ffffff;
+            border: none;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        p{
+            color: #119B1E;;
+        }
+        span{
+            color: red;
+        }
+    }
 }

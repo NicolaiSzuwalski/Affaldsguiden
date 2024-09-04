@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 export const GradientWrapper = ({ children, startColor = '#06682D', endColor = '#FFFFFF' }) => {
   const gradientStyle = {
     background: `linear-gradient(to bottom, ${startColor}, ${endColor})`,
-    minHeight: '80vh',
+    minHeight: '10vh',
   };
 
   const { section_id } = useParams();
