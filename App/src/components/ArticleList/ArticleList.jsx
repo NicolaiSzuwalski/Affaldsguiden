@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from './Articles.module.scss'
+import styles from './ArticleList.module.scss'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useSupabase } from '../../providers/SupabaseProvider'
 import readMore from '../../assets/images/readMore.png'
 import { format } from 'date-fns';
 
-export const Articles = () => {
+export const ArticleList = () => {
     const { supabase } = useSupabase();
     const [data, setData] = useState([]);
 
@@ -52,7 +52,7 @@ export const Articles = () => {
                     <b>{formatDate(item.published_at)}</b>
                     </div>
                     <p>{item.teaser}</p>
-                    <Link to='/:section_id'><img src={readMore} alt="readMore" /></Link>
+                    <Link to={`./${item.id}`}><img src={readMore} alt="readMore" /></Link>
                     </div>
                 </div>
                 );
