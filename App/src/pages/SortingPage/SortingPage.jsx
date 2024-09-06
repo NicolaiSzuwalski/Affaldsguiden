@@ -3,12 +3,13 @@ import { GradientWrapper } from '../../components/GradientWrapper/GradientWrappe
 import { Sorting } from '../../components/Sorting/Sorting'
 import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper'
 import styles from './SortingPage.module.scss'
+import { Outlet } from 'react-router-dom'
 
 export const SortingPage = () => {
   return (
     <GradientWrapper>
       <ContentWrapper>
-        <Sorting/>
+        <Outlet/>
       </ContentWrapper>
     </GradientWrapper>
   )

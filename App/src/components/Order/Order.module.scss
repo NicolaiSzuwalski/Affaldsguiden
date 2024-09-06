@@ -1,0 +1,33 @@
+.OrderMain{
+    background: linear-gradient(to bottom, #D8EADB, #ffffff);
+    font-family: "Open Sans", sans-serif;
+    padding: 30px;
+    h1{
+        font-size: 32px;
+    }
+    h5{
+        font-size: 24px;
+        color: #119B1E;
+        font-weight: 400;
+    }
+    .confirmed{
+            color: #119B1E;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        input{
+            width: 50%;
+            padding: 10px;
+        }
+        button{
+            padding: 10px;
+            width: 15%;
+            background-color: #119B1E;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+    }
+}

@@ -30,22 +30,15 @@ export const Sites = () => {
         getSiteData();
     },[supabase]);
 
-    // <RiStarSFill /> //
-    // <RiStarSLine /> //
-
     return (
         <section className={styles.SitesContainer}>
             <h1>Genbrugsstationer</h1>
             <div className={styles.SitesCards}>
                 {data.map((item) => (
                     <Link key={item.id} to={`/:section_id`}>
+                        <div className={styles.Card}>
                         <div className={styles.CardImg}>
                             <iframe
-                                width="300"
-                                height="170"
-                                frameBorder="0"
-                                marginHeight="0"
-                                marginWidth="0"
                                 src={`https://maps.google.com/maps?q=${item.longitude},${item.latitude}&hl=en&z=14&output=embed`}
                                 title={`Map for ${item.name}`}  
                             >
@@ -56,7 +49,16 @@ export const Sites = () => {
                                 <h2>{item.name}</h2>
                                 <p>{item.address}</p>
                             </div>
-                            <div className={styles.Rating}></div>
+                        <div className={styles.Rating}></div>
+                        <RiStarSFill />
+                        <RiStarSFill />
+                        <RiStarSFill />
+                        <RiStarSFill />
+                        <RiStarSLine />
+                         
+                        
+                        </div>
+                    
                         </div>
                     </Link>
                 ))}

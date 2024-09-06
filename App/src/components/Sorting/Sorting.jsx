@@ -3,16 +3,19 @@ import styles from './Sorting.module.scss'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useSupabase } from '../../providers/SupabaseProvider'
+import { useParams } from 'react-router-dom'
 
 export const Sorting = () => {
     const { supabase } = useSupabase();
     const [data, setData] = useState([]);
+   
 
     const getSortingData = async () => {
         if(supabase){
             const { data, error } = await supabase
                 .from('trash_sections')
                 .select('id, title, description, color, image_url')
+
             if(error){
                 console.error(error);
             }else{
@@ -33,7 +36,7 @@ export const Sorting = () => {
             <div className={styles.SortingCards}>
                 {data.map((item) => {
                     return (
-                    <Link to='/:section_id'>
+                    <Link to={`./${item.id}`}>
                         <div key={item.id} className={styles.Card}>
                             <article className={styles.CardName} style={{ backgroundColor: `#${item.color}` }}>
                                 <h2 className={styles.Title}>{item.title}</h2>
